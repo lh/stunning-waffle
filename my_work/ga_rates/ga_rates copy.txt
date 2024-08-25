@@ -1,0 +1,279 @@
+# General anaesthesia rates for current consultants
+
+Data was harvested from Medisight 11/7/2024; using the audit feature to download a spreadsheetof all the listings for surgery on the system.
+
+Data was anonymised and then analysed using python.
+
+Code is included for reproduction
+
+```{python, echo=FALSE}
+# Setup, import libs, define functions, read datafile, select only cataracts
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import re
+
+# Function to convert to snake_case
+def to_snake_case(name):
+    name = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)  # Handles camelCase
+    name = re.sub('([a-z0-9])([A-Z])', r'\1_\2', name).lower()  # Handles PascalCase
+    name = re.sub(r'\s+', '_', name)  # Replaces spaces with underscores
+    name = re.sub(r'__', '_', name)  # Replaces double underscores with underscores
+    return name.lower()
+
+
+
+datafile = 'data/anonymized_data.xlsx'
+data = pd.read_excel(datafile)
+data.columns = [to_snake_case(col) for col in data.columns]
+
+# First select only cataract cases 
+
+df = data[(data['planned_operation_desc'] == 'L phacoemulsification + IOL') | (data['planned_operation_desc'] == 'R phacoemulsification + IOL')]
+
+# Create a colour map so plotting uses consistent colours
+
+# Example color map
+color_map = {
+    'Ms Sengal Nadarajah': 'gray', 
+    'Mr Ijaz Sheikh': 'blue', 
+    'Ms Kapka Nenova': 'green', 
+    'Mr Luke Herbert': 'orange', 
+    'Miss Sahar Parvizi': 'purple', 
+    'Mr Guy Negretti': 'brown',  
+    'Miss Tahmina Pearsall': 'pink', 
+    'Mr Partha Chakraborty': 'red', 
+    'Miss Arij Daas': 'olive',  
+    'Miss Pratibha Veeramani': 'cyan'
+}
+```
+```{python, echo=FALSE}
+# Determine who is responsible function
+
+# There are a lot where the listed_by is not recorded, but the recorded_by is, so we will create a "listed_by" column to use for this analysis
+
+# Function to determine the value for 'listed_by'
+def determine_listed_by(row, consultant_names):
+    if (row['listed_by'] != "Not Recorded" ) and (row['listed_by'] != "MR Review Group ."):
+        return row['responsible']
+    elif row['recorded_by'] in consultant_names:
+        return row['recorded_by']
+    else:
+        return None  # Or some default value
+
+consultant_names = ['Ms Sengal Nadarajah', 
+                    'Mr Ijaz Sheikh', 
+                    'Mr Minas Georgopoulos', 
+                    'Ms Kapka Nenova', 
+                    'Mr Luke Herbert', 
+                    'Miss Sahar Parvizi', 
+                    'Mr Sleiman Abou-Ltaif', 
+                    'Mr Guy Negretti', 
+                    "Ms Fiona O'Sullivan", 
+                    'Miss Kelly Weston', 
+                    'Miss Tahmina Pearsall', 
+                    'Mr Roger Wilson', 
+                    'Ms Asha Ramanathan', 
+                    'Suman Pilli', 
+                    'Mr Partha Chakraborty', 
+                    'Mr Lavnish Joshi', 
+                    'Miss Arij Daas', 
+                    'Mrs Marie-Noelle Lazaridou', 
+                    'Miss Pratibha Veeramani'
+                    ]
+```
+
+
+```{python, echo=FALSE}
+# Apply who is responsible 
+
+# Instead of directly applying changes like this:
+# df['listed_by'] = df.apply(lambda row: determine_listed_by(row, consultant_names), axis=1)
+
+# Ensure df is a standalone DataFrame
+df = df.copy()
+# Use .loc to ensure you're working on the DataFrame directly
+# Ensure the 'listed_by' column exists
+if 'listed_by' not in df.columns:
+    df.loc[:, 'listed_by'] = "unknown"  # Initialize with NaNs or an appropriate default value
+```
+```{python, echo=FALSE}
+# plot graphs
+df.loc[:, 'listed_by'] = df.apply(lambda row: determine_listed_by(row, consultant_names), axis=1)
+
+current_consultants = [
+                    'Ms Sengal Nadarajah', 
+                    'Mr Ijaz Sheikh', 
+                    'Ms Kapka Nenova', 
+                    'Mr Luke Herbert', 
+                    'Miss Sahar Parvizi', 
+                    'Mr Guy Negretti',  
+                    'Miss Tahmina Pearsall', 
+                    'Mr Partha Chakraborty', 
+                    'Miss Arij Daas',  
+                    'Miss Pratibha Veeramani'
+                    ]
+
+
+# Step 0: Filter out the specific surgeon
+# df_filtered = df[(df['listed_by'] != 'Mr Luke Herbert') & (df['listed_by'] != 'Suman Pilli') & (df['listed_by'] != 'Miss Sahar Parvizi') & (df['listed_by'] != 'MR Review Group .')]
+
+# Filter to include only current consultants
+df_filtered = df[df['listed_by'].isin(current_consultants)]
+
+df_filtered = df_filtered [df_filtered ['listed_by'] != "Not Recorded"]
+
+# Step 1 & 2: Group by 'listed_by' and 'anaesthesia_type', then count
+anaesthesia_counts = df_filtered.groupby(['listed_by', 'anaesthesia_type']).size().reset_index(name='counts')
+
+# Step 3: Pivot the table
+anaesthesia_pivot = anaesthesia_counts.pivot(index='listed_by', columns='anaesthesia_type', values='counts').fillna(0)
+
+# Step 4: Calculate the proportion of GA
+# Assuming 'GA' is the column name for General Anesthesia in your pivoted table
+anaesthesia_pivot['GA_proportion'] = anaesthesia_pivot['General Anaesthesia'] / anaesthesia_pivot.sum(axis=1)
+
+# Step 5: Plot
+anaesthesia_pivot['GA_proportion'].plot(kind='bar', figsize=(10, 6))
+plt.title('Proportion of General Anesthesia by Surgeon')
+plt.xlabel('Surgeon')
+plt.ylabel('Proportion of GA')
+plt.show()
+
+
+
+# Calculate total operations per surgeon for width scaling
+total_operations_per_surgeon = df_filtered.groupby('listed_by').size()
+
+
+# Filter out surgeons with fewer than enough operations
+enough = 10  # Minimum number of operations to include a surgeon
+surgeons_with_enough_operations = total_operations_per_surgeon[total_operations_per_surgeon >= enough].index
+
+# Filter the filtered DataFrame to include only those surgeons
+df_filtered = df_filtered[df_filtered['listed_by'].isin(surgeons_with_enough_operations)]
+
+
+# Normalize the widths to ensure they are visually meaningful and fit well in the plot
+max_width = 1.1 # Maximum width for the largest surgeon group
+min_width = 0.01  # Minimum width to ensure bars are visible
+normalized_widths = (total_operations_per_surgeon / total_operations_per_surgeon.max() * (max_width - min_width)) + min_width
+
+# Plotting each surgeon's GA proportion with scaled bar widths
+fig, ax = plt.subplots(figsize=(10, 6))
+for surgeon, proportion in anaesthesia_pivot['GA_proportion'].items():
+    width = normalized_widths[surgeon]
+    color = color_map[surgeon]  # Use the color map to assign colors
+    ax.bar(surgeon, proportion, width=width, color=color, label=surgeon)
+plt.title("Proportion of General Anesthesia by Surgeon\n(Width Scaled by Operation Count)", pad=20)  # Adjusted title with pad for spacing
+plt.ylabel('Proportion of GA')
+plt.xticks(rotation=45, ha="right")  # Rotate surgeon names for better readability
+plt.tight_layout()  # Adjust layout to make room for the rotated x-axis labels
+plt.show()
+
+
+```
+
+# Who orders the most GA? 
+
+```{python, echo=FALSE}
+# Pie charts
+# Step 1: Filter for General Anesthesia
+ga_df = df_filtered[df_filtered['anaesthesia_type'] == 'General Anaesthesia']
+
+# Step 2: Group by 'listed_by' and count
+ga_counts = ga_df.groupby('listed_by').size()
+
+# Sort ga_counts to match the order of the color map
+# Reindex ga_counts to include all surgeons from color_map, filling missing values with 0
+ga_counts_sorted = ga_counts.reindex(color_map.keys()).fillna(0)
+# ga_counts_sorted = ga_counts.loc[color_map.keys()]
+
+# Generate colors based on the sorted index
+default_color = 'white'
+
+colors = [color_map[surgeon] if surgeon in ga_counts_sorted.index else default_color for surgeon in color_map.keys()]
+
+
+
+
+# Assuming ga_counts_sorted and colors are defined as in your excerpt
+
+# Determine slices to explode out based on a threshold (e.g., less than 5% of the total)
+threshold = 0.10
+explode_threshold = ga_counts_sorted / ga_counts_sorted.sum()
+explode = [0.3 if percent < threshold else 0 for percent in explode_threshold]
+
+# Custom autopct function to only show labels above a certain percentage
+def custom_autopct(pct):
+    return ('%1.0f%%' % pct) if pct >= threshold * 100 else ''
+
+# Plot with adjustments
+fig, ax = plt.subplots(figsize=(10, 8))  # Increase figure size for better readability
+ga_counts_sorted.plot(kind='pie', 
+                    colors=colors, 
+                    autopct=custom_autopct, 
+                    startangle=140, 
+                #    explode=explode, 
+                    ax=ax)
+
+plt.title('General Anesthesia Cases by Surgeon')
+plt.ylabel('')  # Hide the y-label as it's not needed for pie charts
+
+# Optional: Add a legend outside the plot to improve readability
+# plt.legend(ga_counts_sorted.index, title="Surgeons", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
+
+plt.show()
+```
+
+# Tables of GA proportions
+
+```{python, echo=FALSE}
+# Tabular data
+
+
+# Step 1: Calculate total listings for each surgeon
+total_listings = df_filtered.groupby('listed_by').size()
+
+# Step 2: Calculate the proportion of GA listings
+ga_proportions = ga_counts / total_listings
+
+# Step 3: Create a DataFrame with the necessary information
+data_table_raw = pd.DataFrame({
+    'Total Listings': total_listings,
+    'GA Listings': ga_counts,
+    'Proportion of GA': ga_proportions
+})
+
+# Fill NaN values with 0 for surgeons with no GA listings
+data_table = data_table_raw.fillna(0)
+
+# Convert the proportion to a percentage for better readability
+data_table['Proportion of GA'] = data_table['Proportion of GA'].apply(lambda x: f"{x:.2%}")
+
+# Print the DataFrame
+# print(data_table)
+
+data_table_renamed = data_table_raw.rename(columns={
+    'Total Listings': 'Total Listed',
+    'GA Listings': 'Percentage of all GA listed',
+    'Proportion of GA': 'Percentage of all listed by this surgeon that are GA'
+})
+
+data_table_renamed = data_table_renamed.fillna(0)
+# Now, apply the styling to the renamed DataFrame
+styled_df = data_table_renamed.style.format({
+    'Percentage of all listed by this surgeon that are GA': "{:.1%}",  # Format the 'GA Proportion' as a percentage
+    "Percentage of all GA listed": "{:.0f}"  # Format the 'GA Procedures' as an integer
+}).map(lambda x: 'color: red' if isinstance(x, int) and x < 100 else '', subset=['Total Listed', 'Percentage of all GA listed']
+        ).bar(subset=['Percentage of all GA listed'], color='green'
+            ).bar(subset=['Percentage of all listed by this surgeon that are GA'], color='red'
+            ).set_properties(**{
+    'background-color': 'black',
+    'color': 'white',
+    'border-color': 'green'
+})
+
+styled_df
+```

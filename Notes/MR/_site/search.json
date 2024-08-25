@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Mermaid Test",
+    "section": "",
+    "text": "```mermaid graph TD A[Start] –&gt; B[Process] B –&gt; C[End]"
+  }
+]

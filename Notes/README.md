@@ -1,0 +1,1 @@
+# HSMA notes and stuff

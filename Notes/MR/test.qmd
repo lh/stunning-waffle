@@ -1,0 +1,11 @@
+---
+title: "Mermaid Test"
+format:
+    html:
+        mermaid: {}
+---
+
+```mermaid
+graph TD
+    A[Start] --> B[Process]
+    B --> C[End]

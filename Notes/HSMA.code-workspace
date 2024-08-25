@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveshare.allowGuestDebugControl": true,
+		"liveshare.allowGuestTaskControl": true,
+		"git.ignoreLimitWarning": true
+	}
+}

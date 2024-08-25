@@ -1,0 +1,52 @@
+---
+title: "PV Eylea 2mg pathway"
+author: "Luke Herbert"
+date: "2024-08-02"
+format:
+  html:
+    mermaid: {}
+---
+
+```{r}
+cat("# ", rmarkdown::metadata$title, "\n")
+```
+
+```mermaid
+graph TD
+    Start[Diagnosis] --> Week0[Week 0: Treatment]
+    Week0 --> Week4[Week 4: Treatment]
+    Week4 --> Week8[Week 8: Treatment + OCT Scan]
+    Week8 --> VirtualReview{Virtual Review}
+    
+    VirtualReview -->|Continue| Week16[Week 16: Treatment + Scan]
+    VirtualReview -->|Stop| End[End Treatment]
+    VirtualReview -->|Switch| SwitchTreatment[Switch to Another Treatment]
+    
+    Week16 --> Week16Review{Review}
+    Week16Review -->|Dry| Extend10Weeks[Extend to 10 Weeks]
+    Week16Review -->|Responding but not perfect| Continue8Weeks[Continue 8 Weeks]
+    Week16Review -->|Worse| ReconsiderSwitch[Reconsider Switching]
+    
+    Extend10Weeks --> NextVisit[Next Visit]
+    Continue8Weeks --> NextVisit
+    
+    NextVisit --> VisitReview{Review}
+    VisitReview -->|Dry and Vision OK| ExtendInterval[Extend Interval by 2 Weeks]
+    VisitReview -->|Not Dry or Vision Not OK| AdjustTreatment[Adjust Treatment]
+    
+    ExtendInterval --> IntervalCheck{Interval = 16 Weeks?}
+    IntervalCheck -->|No| NextVisit
+    IntervalCheck -->|Yes| Check16WeekStability
+    
+    Check16WeekStability{3 Consecutive 16-Week Visits?}
+    Check16WeekStability -->|No| NextVisit
+    Check16WeekStability -->|Yes| FinalDecision{Final Decision}
+    
+    FinalDecision -->|Continue at 16 Weeks| ContinueIndefinitely[Continue at 16 Weeks Indefinitely]
+    FinalDecision -->|Stop, with Monitoring| StopWithMonitoring[Stop Treatment, Continue Monitoring]
+    
+    ContinueIndefinitely --> NextVisit
+    
+    classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
+    class VirtualReview,Week16Review,VisitReview,IntervalCheck,Check16WeekStability,FinalDecision decision;
+```

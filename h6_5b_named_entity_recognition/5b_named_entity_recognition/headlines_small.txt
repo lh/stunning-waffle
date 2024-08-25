@@ -1,0 +1,13 @@
+[
+	{
+		"metadata": {
+			"outputType": "stream"
+		},
+		"outputItems": [
+			{
+				"mimeType": "application/vnd.code.notebook.stdout",
+				"data": "Named Entities:\n10 years (DATE)\nsunshine coast pastor (ORG)\naustralian (NORP)\nhillary clinton mar (PERSON)\niran (GPE)\nitaly (GPE)\nnick darcy (PERSON)\n300 hectares (QUANTITY)\n3 (CARDINAL)\nmark downey (PERSON)\nyear 10 (DATE)\ntyphoon (TIME)\nparma (NORP)\nfrench (NORP)\nemmanuel macron (PERSON)\njohansson join (ORG)\ncastro (PERSON)\nlynda williams (PERSON)\ntwo (CARDINAL)\nweekend (DATE)\njapanese (NORP)\nam1 lynn (PERSON)\nhmas newcastle (ORG)\ndarfur (GPE)\nkim (PERSON)\nbelgium (GPE)\n8000 (CARDINAL)\nspanish (NORP)\nrome (GPE)\nbandt gm (ORG)\nnsw (CARDINAL)\nbritish (NORP)\nafghanistan (GPE)\nitalian (NORP)\none (CARDINAL)\ntwo (CARDINAL)\nwoodford dcc (ORG)\nasada (GPE)\nmount gambier southgate motel (LOC)\nfrench (NORP)\n18 (CARDINAL)\nmore than 80 (CARDINAL)\ndodson (PERSON)\nhour (TIME)\nthai pm (TIME)\nfriday three (DATE)\njapan (GPE)\n\nProcessing each entry separately:\n\nEntry 1:\n\nEntry 2:\n\nEntry 3:\n10 years (DATE)\n\nEntry 4:\nsunshine coast pastor (ORG)\n\nEntry 5:\naustralian (NORP)\n"
+			}
+		]
+	}
+]

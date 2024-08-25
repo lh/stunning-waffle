@@ -1,0 +1,12 @@
+After a 10 minute break, you will work in your groups. Dan, having grown weary of the human race, has decided to relocate to a remote desert island. To keep himself occupied, he’s decided to pack a DVD player and a number of DVDs. We’ll suspend our disbelief about some of the logistical issues, such as lack of an electricity supply.
+
+After 1 hour, you will be presented with a series of DVDs. Your task is to develop an “algorithm” that will attempt to classify whether or not Dan would want to take each DVD to the desert island or not. Dan enjoys a lot of films, but he’s got to be selective, as he can only pack so much. So he only wants to take the films he loves the most. 
+
+To help you develop your algorithm over the first hour, you will be provided with some “training data” – a list of films along with whether or not Dan decided they would make the “cut” to be taken onto the island. From this, you should decide which features you will incorporate into your training (e.g. things like director, genre, year of release etc). Use online resources (such as IMDb) to find out information about the films. For this exercise, your features should be boolean (e.g. “Is Director Steven Spielberg?”, “Was film released in 60s?”). 
+
+Your algorithm should give a weight score to each feature, such that a score is given to the feature if that feature is true (or false, or you could sometimes use negative scores). You then add up the scores for the feature values for that film, and use a threshold total score (which you decide) to determine whether the film is predicted to be a Desert Island DVD.
+
+
+You should use the training set to try to optimise your algorithm. You should use the three metrics of accuracy, precision and recall to monitor how well you are training and adjust your algorithm (by changing weights, throwing out unimportant features, bringing in new features, changing the threshold etc). But remember – be wary about overfitting (and underfitting!).
+
+In 1 hour, you’ll be given the Test Set, and you’ll apply your algorithm to the Test Set examples, and will calculate your algorithm’s accuracy, precision and recall (you will have 30 minutes for this). Your algorithm cannot be changed once the test set has been released. At the end of the exercise, we’ll find out how you got on!  Tip - you’ll need to work efficiently together in this exercise to gather data and make decisions.

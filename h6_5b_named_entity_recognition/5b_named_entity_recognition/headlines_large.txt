@@ -1,0 +1,13 @@
+[
+	{
+		"metadata": {
+			"outputType": "stream"
+		},
+		"outputItems": [
+			{
+				"mimeType": "application/vnd.code.notebook.stdout",
+				"data": "Named Entities:\nbush (PERSON)\nrogers re (ORG)\nnelson (PERSON)\nweengallon pink (ORG)\nladies day (DATE)\ntony abbotts (PERSON)\n2017 (DATE)\nivan (PERSON)\nhazem el masri (PERSON)\nkiribati (ORG)\ndecember 22 (DATE)\nfrench (NORP)\nworld cup (EVENT)\neast rann (GPE)\nlushsux (PERSON)\nengland (NORP)\nsri lanka (GPE)\nsix (CARDINAL)\nmckenna (PERSON)\njohn pat (PERSON)\nbunbury (ORG)\niraqi (NORP)\narctic (LOC)\nfifth (ORDINAL)\nwallabies smash eagles intervention (ORG)\nobama (PERSON)\n2012 (DATE)\npaul budde (PERSON)\nqld (GPE)\nbleijie state opposition (ORG)\n300k (MONEY)\n194b (DATE)\nmichael klinger (PERSON)\nyear (DATE)\nabc (ORG)\nsecond (ORDINAL)\npoland (GPE)\nswitzerland (GPE)\nshaquiri wondergoal (PERSON)\nkhan (PERSON)\n1kg (QUANTITY)\ncaulfield cup (ORG)\nam1 (NORP)\ndi canio (ORG)\nny (GPE)\nwedding day (DATE)\nnext year (DATE)\ntasmanian (NORP)\nindia (GPE)\ndurri aboriginal medical centre (ORG)\nsegway (PRODUCT)\naustralian (NORP)\nnba (ORG)\nindonesian (NORP)\nparramatta mcilroy struggles (ORG)\npalm beach (GPE)\nherman (PERSON)\ndr brown (PERSON)\nhenry lawson (PERSON)\nthree (CARDINAL)\ntasmania govt (ORG)\ntasmanian (NORP)\ntoday (DATE)\nat least six weeks (DATE)\n\nProcessing each entry separately:\n\nEntry 1:\nbush (PERSON)\n\nEntry 2:\n\nEntry 3:\nrychart (ORG)\nrogers re (ORG)\n\nEntry 4:\n\nEntry 5:\ntindal air base (ORG)\n"
+			}
+		]
+	}
+]

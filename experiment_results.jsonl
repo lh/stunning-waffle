@@ -1,0 +1,5 @@
+{"learning_rate": 0.001, "dropout": 0.1, "hidden_layer_neurones": 16, "hidden_layers": 1, "batch_size": 30, "accuracy_test": 0.8197424892703863}
+{"learning_rate": 0.001, "dropout": 0.1, "hidden_layer_neurones": 16, "hidden_layers": 2, "batch_size": 30, "accuracy_test": 0.8197424892703863}
+{"learning_rate": 0.001, "dropout": 0.1, "hidden_layer_neurones": 16, "hidden_layers": 3, "batch_size": 30, "accuracy_test": 0.8218884120171673}
+{"learning_rate": 0.001, "dropout": 0.1, "hidden_layer_neurones": 16, "hidden_layers": 4, "batch_size": 30, "accuracy_test": 0.8068669527896996}
+{"learning_rate": 0.001, "dropout": 0.1, "hidden_layer_neurones": 16, "hidden_layers": 5, "batch_size": 30, "accuracy_test": 0.8175965665236051}

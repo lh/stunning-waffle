@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{mermaid}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section{PV Eylea 2mg pathway}\label{pv-eylea-2mg-pathway}
+
+version 0.1
+
+Date: 2024-08-02
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph TD}
+\NormalTok{    Start[Diagnosis] {-}{-}\textgreater{} Week0[Week 0: Treatment]}
+\NormalTok{    Week0 {-}{-}\textgreater{} Week4[Week 4: Treatment]}
+\NormalTok{    Week4 {-}{-}\textgreater{} Week8[Week 8: Treatment + OCT Scan]}
+\NormalTok{    Week8 {-}{-}\textgreater{} VirtualReview\{Virtual Review\}}
+    
+\NormalTok{    VirtualReview {-}{-}\textgreater{}|Continue| Week16[Week 16: Treatment + Scan]}
+\NormalTok{    VirtualReview {-}{-}\textgreater{}|Stop| End[End Treatment]}
+\NormalTok{    VirtualReview {-}{-}\textgreater{}|Switch| SwitchTreatment[Switch to Another Treatment]}
+    
+\NormalTok{    Week16 {-}{-}\textgreater{} Week16Review\{Review\}}
+\NormalTok{    Week16Review {-}{-}\textgreater{}|Dry| Extend10Weeks[Extend to 10 Weeks]}
+\NormalTok{    Week16Review {-}{-}\textgreater{}|Responding but not perfect| Continue8Weeks[Continue 8 Weeks]}
+\NormalTok{    Week16Review {-}{-}\textgreater{}|Worse| ReconsiderSwitch[Reconsider Switching]}
+    
+\NormalTok{    Extend10Weeks {-}{-}\textgreater{} NextVisit[Next Visit]}
+\NormalTok{    Continue8Weeks {-}{-}\textgreater{} NextVisit}
+    
+\NormalTok{    NextVisit {-}{-}\textgreater{} VisitReview\{Review\}}
+\NormalTok{    VisitReview {-}{-}\textgreater{}|Dry and Vision OK| ExtendInterval[Extend Interval by 2 Weeks]}
+\NormalTok{    VisitReview {-}{-}\textgreater{}|Not Dry or Vision Not OK| AdjustTreatment[Adjust Treatment]}
+    
+\NormalTok{    ExtendInterval {-}{-}\textgreater{} IntervalCheck\{Interval = 16 Weeks?\}}
+\NormalTok{    IntervalCheck {-}{-}\textgreater{}|No| NextVisit}
+\NormalTok{    IntervalCheck {-}{-}\textgreater{}|Yes| Check16WeekStability}
+    
+\NormalTok{    Check16WeekStability\{3 Consecutive 16{-}Week Visits?\}}
+\NormalTok{    Check16WeekStability {-}{-}\textgreater{}|No| NextVisit}
+\NormalTok{    Check16WeekStability {-}{-}\textgreater{}|Yes| FinalDecision\{Final Decision\}}
+    
+\NormalTok{    FinalDecision {-}{-}\textgreater{}|Continue at 16 Weeks| ContinueIndefinitely[Continue at 16 Weeks Indefinitely]}
+\NormalTok{    FinalDecision {-}{-}\textgreater{}|Stop, with Monitoring| StopWithMonitoring[Stop Treatment, Continue Monitoring]}
+    
+\NormalTok{    ContinueIndefinitely {-}{-}\textgreater{} NextVisit}
+    
+\NormalTok{    classDef decision fill:\#f9f,stroke:\#333,stroke{-}width:2px;}
+\NormalTok{    class VirtualReview,Week16Review,VisitReview,IntervalCheck,Check16WeekStability,FinalDecision decision;}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
