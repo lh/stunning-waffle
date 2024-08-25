@@ -179,4 +179,12 @@ cython_debug/
 .vscode/
 
 # Mac OS
+.DS_Storeh6_3b_advanced_qgis_mapping_python/
+h6_3c_interactive_plots_travel/h6_3c_interactive_plots_travel/example_code/
+h6_3d_facility_location_problems/h6_3d_facility_location_problems/example_code/
+h6_5c_sentiment_analysis/5c_sentiment_analysis/aclImdb_v1/
+
 .DS_Store
+**/.DS_Store
+**/my_datasets/
+
