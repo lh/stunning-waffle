@@ -58,6 +58,7 @@ To remove a file type from the repo, but not from the local machine:
 
 ```bash
 git rm --cached "*.pdf"
+git commit -m "Remove all files of type pdf"
 ```
 
 ```gitignore
@@ -97,4 +98,14 @@ or recursively with a wildcard:
 
 ```bash
 nbstripout -r *.ipynb
+```
+
+# Important "Gotchas"
+
+If the internet connection ins slow or unreliable, you may need to change some parameters:
+
+```bash
+git config --global http.postBuffer 524288000
+git config --global http.lowSpeedLimit 0
+git config --global http.lowSpeedTime 999999
 ```

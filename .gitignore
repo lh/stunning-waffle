@@ -7,6 +7,8 @@ h6_5d_project/datasets/
 h6_5d_project/rebels.keras
 h6_5d_project/my_model.h5
 
+# no need to backup the examples
+example_code/*
 
 *.pptx
 *.pdf 
@@ -14,6 +16,10 @@ h6_5d_project/my_model.h5
 *.webarchive
 *.html
 *.csv
+*.geojson
+*.tar
+*.zip
+*.xlsx
 
 # Ignore all .pkl files
 *.pkl
