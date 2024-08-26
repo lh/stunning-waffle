@@ -3,3 +3,4 @@
 *.geojson filter=lfs diff=lfs merge=lfs -text
 h6_3b_advanced_qgis_mapping_python/h6_3b_advanced_qgis_and_mapping_in_python/exercises/geopd2folium.ipynb filter=lfs diff=lfs merge=lfs -text
 h6_3b_advanced_qgis_mapping_python/h6_3b_advanced_qgis_and_mapping_in_python/solutions/sapelsoasyoatablefinal.xlsx filter=lfs diff=lfs merge=lfs -text
+h6_3b_advanced_qgis_mapping_python/h6_3b_advanced_qgis_and_mapping_in_python/datasets/exercise_1/stats_19_counts_by_msoa_3857.geojson filter=lfs diff=lfs merge=lfs -text
