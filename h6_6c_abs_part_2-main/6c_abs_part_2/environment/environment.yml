@@ -1,0 +1,9 @@
+name: abs
+channels:
+  - defaults
+dependencies:
+  - python=3.11.4
+  - pip
+  - pip:
+    - mesa==2.3.0
+prefix: C:\Users\dan\anaconda3\envs\abs
