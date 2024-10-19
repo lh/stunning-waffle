@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "CMHT KPIs Dashboard"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: staffing.qmd
+        text: Staffing
+      - href: referral-access.qmd
+        text: Referral & Access
+      - href: safety.qmd
+        text: Safety
+      - href: kpi-definitions.qmd
+        text: KPI Definitions
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto
+

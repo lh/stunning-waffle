@@ -1,0 +1,5 @@
+.~lock
+solutions/
+*.pyc
+.venv/
+hello_quarto.html

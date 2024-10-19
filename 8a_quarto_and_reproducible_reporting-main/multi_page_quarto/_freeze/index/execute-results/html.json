@@ -1,0 +1,12 @@
+{
+  "hash": "e09dfff45923309c374acc3a5d3bc460",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"CMHT KPIs Dashboard\"\nparams:\n  team: \"Waterdeep\"\nformat:\n  html:\n    page-layout: full\n    embed-resources: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n# Overview {.unnumbered}\n\nThis dashboard presents key performance indicators (KPIs) for the Waterdeep Community Mental Health Team (CMHT). The data is organized into three main categories:\n\n1. [Staffing KPIs](staffing.qmd)\n2. [Referral and Access KPIs](referral-access.qmd)\n3. [Safety KPIs](safety.qmd)\n\nClick on the links above or use the navigation menu to explore each category of KPIs.\n\nFor detailed definitions of all KPIs, please refer to the [KPI Definitions](kpi-definitions.qmd) page.\n\nData last updated: Aug 2024\n\n\n",
+    "supporting": [
+      "index_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

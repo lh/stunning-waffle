@@ -1,0 +1,53 @@
+/* Import the Hind font */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+/* Apply the font to everything */
+* {
+    font-family: 'Hind', sans-serif !important;
+}
+
+/* Base styles */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Streamlit-specific element styles */
+.stTextInput > div > div > input,
+.stSelectbox > div > div > select,
+.stMultiSelect > div > div > div > div > input,
+.stDateInput > div > div > input,
+.stTimeInput > div > div > input,
+.stNumberInput > div > div > input,
+.stFileUploader > div > div > input,
+.stTextArea > div > div > textarea {
+    font-size: 16px !important;
+}
+
+/* Header styles */
+h1 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+
+h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+
+/* Button styles */
+.stButton > button {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Sidebar */
+.sidebar .sidebar-content {
+    font-size: 16px !important;
+}

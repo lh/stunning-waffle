@@ -1,0 +1,73 @@
+---
+title: "Referral and Access KPIs"
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+execute:
+  echo: false
+---
+
+```{python}
+#| echo: false
+import os
+team = os.environ.get('QUARTO_PARAM_TEAM', "Waterdeep")
+```
+
+
+```{python}
+#| output: false
+from common import *
+```
+
+:::: {.panel-tabset}
+
+## KPI 201 - New Referrals in Month
+
+`{python} get_kpi_month('KPI 201 - New Referrals in Month')`
+
+```{python}
+kpi_line_chart('KPI 201 - New Referrals in Month')
+```
+
+## KPI 202 - Caseload
+
+`{python} get_kpi_month('KPI 202 - Caseload')`
+
+```{python}
+kpi_line_chart('KPI 202 - Caseload')
+```
+
+## KPI 203 - Mean Wait in Days for Referrals With First Appointment in Month
+
+`{python} get_kpi_month('KPI 203 - Mean Wait in Days for Referrals With First Appointment in Month')`
+
+```{python}
+kpi_line_chart('KPI 203 - Mean Wait in Days for Referrals With First Appointment in Month')
+```
+
+## KPI 204 - Percentage Rereferred Within 60 Days
+
+`{python} get_kpi_month('KPI 204 - Percentage Rereferred Within 60 Days')`
+
+```{python}
+kpi_line_chart('KPI 204 - Percentage Rereferred Within 60 Days')
+```
+
+## KPI 205 - Number on Waiting List at Month End
+
+`{python} get_kpi_month('KPI 205 - Number on Waiting List at Month End')`
+
+```{python}
+kpi_line_chart('KPI 205 - Number on Waiting List at Month End')
+```
+
+## KPI 206 - Number on Waiting List with Wait over 180 Days
+
+`{python} get_kpi_month('KPI 206 - Number on Waiting List with Wait over 180 Days')`
+
+```{python}
+kpi_line_chart('KPI 206 - Number on Waiting List with Wait over 180 Days')
+```
+
+::::

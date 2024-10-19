@@ -1,0 +1,73 @@
+---
+title: "Hello HSMA"
+format: 
+    html:
+#        code-fold: true
+        embed-resources: true
+execute:
+  echo: false
+
+---
+
+# This is a top level header
+
+This is my first Quarto report. 
+
+## This is a second level header
+
+### This is a third level header
+
+This is **bold** text and this is *italic* text.
+
+- this is a list
+- second
+- third
+
+1. this is an ordered list
+1. second
+1. third
+1. fourth
+1. fifth
+
+1. lists can be nested
+    - this is a nested list
+    - second
+    - third
+    - fourth
+1. but use gently!
+    - this is a nested list
+
+Github: [https://github.com/](https://github.com/)
+
+![Penguins](code_examples/quarto/lter_penguins.png){width=50%}
+![Penguins](code_examples/quarto/lter_penguins.png){width=75%}
+![Penguins](code_examples/quarto/lter_penguins.png){width=100%}
+
+```{python}
+#| label: read_data
+import pandas as pd
+penguins_df = pd.read_csv("code_along/penguins_df.csv")
+
+penguins_df.head()
+```
+# This is next code cell
+
+```{python}
+#| label: plot
+import plotly.express as px
+
+px.scatter(penguins_df, x="bill_length_mm", y="bill_depth_mm", color="species")
+```
+
+The average weight of a penguin is `{python} penguins_df["body_mass_g"].mean()`.
+
+:::{.callout-note}
+Anything in this section is part of the note.
+:::
+But this is not. 
+
+
+```{python}
+#| label: another_plot
+
+```

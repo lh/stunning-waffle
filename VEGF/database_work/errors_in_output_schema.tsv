@@ -1,0 +1,771 @@
+Parse error near line 82: table "AcMaintainer" has more than one primary key
+Parse error near line 90: table "AcMaintainerLog" has more than one primary key
+Parse error near line 114: duplicate column name: ActivityId
+Parse error near line 126: table [Activity] already exists
+  CREATE TABLE [Activity] (     [aba_Id] int NOT NULL PRIMARY KEY,     [Activity
+               ^--- error here
+Parse error near line 154: table [activity] already exists
+  CREATE TABLE [activity] (     [act_parent_id] uniqueidentifier );
+               ^--- error here
+Parse error near line 158: near "MAX": syntax error
+  templatetype] int,     [abn_initialstate] varchar(MAX),     [abn_drawingcreati
+                                      error here ---^
+Parse error near line 227: table "ActivityDrugDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 285: table "ActivityIOPGUID" has more than one primary key
+Parse error near line 381: table "ActivityLog" has more than one primary key
+Parse error near line 391: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_Id] int NOT NULL PRIMARY KEY,     [ira_O
+               ^--- error here
+Parse error near line 404: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_id] int NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 408: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [ObjectId] uniqueidentifier NOT NULL,     [et
+               ^--- error here
+Parse error near line 417: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_ect_id] uniqueidentifier );
+               ^--- error here
+Parse error near line 421: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_DateAdded] datetime NOT NULL,     [ira_a
+               ^--- error here
+Parse error near line 434: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_aty_id] int );
+               ^--- error here
+Parse error near line 438: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [AddedBy] uniqueidentifier NOT NULL,     [eta
+               ^--- error here
+Parse error near line 447: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_loc_id] uniqueidentifier );
+               ^--- error here
+Parse error near line 451: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_Transactionid] uniqueidentifier NOT NULL
+               ^--- error here
+Parse error near line 464: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_daterecorded] datetime );
+               ^--- error here
+Parse error near line 468: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [Action] char(1) NOT NULL,     [eta_Action] c
+               ^--- error here
+Parse error near line 477: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_datesaved] datetime );
+               ^--- error here
+Parse error near line 481: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_ect_EncounterId] uniqueidentifier NOT NU
+               ^--- error here
+Parse error near line 493: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_mode] int NOT NULL );
+               ^--- error here
+Parse error near line 497: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [PrescriptionIssued] bit,     [UnderstandsDia
+               ^--- error here
+Parse error near line 504: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_status] int );
+               ^--- error here
+Parse error near line 508: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [aba_UniqueKey] uniqueidentifier,     [Commen
+               ^--- error here
+Parse error near line 513: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_displayset] int );
+               ^--- error here
+Parse error near line 517: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_das_SectionId] int NOT NULL,     [Vouche
+               ^--- error here
+Parse error near line 525: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_parent_id] uniqueidentifier,     [act_Da
+               ^--- error here
+Parse error near line 530: table [ActivityLog] already exists
+  CREATE TABLE [ActivityLog] (     [smt_smr_HasHiddenQueries] bit NOT NULL,     
+               ^--- error here
+Parse error near line 535: table [activitylog] already exists
+  CREATE TABLE [activitylog] (     [act_AddedBy] uniqueidentifier NOT NULL,     
+               ^--- error here
+Parse error near line 541: table "ActivityNurseClinicGUID" has more than one primary key
+Parse error near line 549: table "ActivityOperationIndicationGUID" has more than one primary key
+Parse error near line 630: table "ActivityReview" has more than one primary key
+Parse error near line 649: table "ActivitySectionVersion" has more than one primary key
+Parse error near line 811: duplicate column name: SubSectionId
+Parse error near line 822: duplicate column name: SubSectionId
+Parse error near line 843: duplicate column name: Id
+Parse error near line 853: duplicate column name: Id
+Parse error near line 907: table "Antimetabolite" has more than one primary key
+Parse error near line 938: table "AntimetaboliteLog" has more than one primary key
+Parse error near line 1100: table "ApplicationType" has more than one primary key
+Parse error near line 1163: table "AppointmentStepStatus" has more than one primary key
+Parse error near line 1199: table "ArgonLaserTrabeculoplasty" has more than one primary key
+Parse error near line 1290: table "AssessmentType" has more than one primary key
+Parse error near line 1330: table "Audit" has more than one primary key
+Parse error near line 1338: near "MAX": syntax error
+  t NOT NULL PRIMARY KEY,     [PatchSyntax] varchar(MAX) );
+                                      error here ---^
+Parse error near line 1556: table "BillingChargeMappingDrugDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 1567: table [binarydocument] already exists
+  CREATE TABLE [binarydocument] (     [bdc_id] int NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 1571: table [BinaryDocument] already exists
+  CREATE TABLE [BinaryDocument] (     [SystemDocumentId] uniqueidentifier NOT NU
+               ^--- error here
+Parse error near line 1576: table [binarydocument] already exists
+  CREATE TABLE [binarydocument] (     [bdc_mim_id] int NOT NULL );
+               ^--- error here
+Parse error near line 1580: table [BinaryDocument] already exists
+  CREATE TABLE [BinaryDocument] (     [MimeTypeId] int NOT NULL,     [PageNumber
+               ^--- error here
+Parse error near line 1586: table [binarydocument] already exists
+  CREATE TABLE [binarydocument] (     [bdc_renamedto] varchar(255),     [bdc_fil
+               ^--- error here
+Parse error near line 1616: table "BinaryDocumentRecipientCopy" has more than one primary key
+Parse error near line 1635: near "max": syntax error
+  r NOT NULL PRIMARY KEY,     [blb_image] varbinary(max),     [blb_mim_id] int )
+                                      error here ---^
+Parse error near line 1676: table "BotulinumToxin" has more than one primary key
+Parse error near line 1694: table "BotulinumToxinLog" has more than one primary key
+Parse error near line 1989: table "Charge" has more than one primary key
+Parse error near line 2233: table "ClinicalConceptFeatureLookup" has more than one primary key
+Parse error near line 2639: duplicate column name: Id
+Parse error near line 2853: table "CxlPreparation" has more than one primary key
+Parse error near line 2864: table "CxlPreparationLog" has more than one primary key
+Parse error near line 2885: table "CxlSurgicalCompletion" has more than one primary key
+Parse error near line 2894: table "CxlSurgicalCompletionDrugs" has more than one primary key
+Parse error near line 2913: table "CxlSurgicalCompletionLog" has more than one primary key
+Parse error near line 2932: table "Cyclodiode" has more than one primary key
+Parse error near line 2953: table "CyclodiodeLog" has more than one primary key
+Parse error near line 2984: table "CyclodiodeMedications" has more than one primary key
+Parse error near line 3003: duplicate column name: Id
+Parse error near line 3015: duplicate column name: Id
+Parse error near line 3036: table "Data" has more than one primary key
+Parse error near line 3090: near "max": syntax error
+  nt NOT NULL PRIMARY KEY,     [sdd_data] varbinary(max) NOT NULL,     [sdd_mapp
+                                      error here ---^
+Parse error near line 3115: near "MAX": syntax error
+  ] bit NOT NULL,     [dcc_FailureMessages] varchar(MAX) );
+                                      error here ---^
+Parse error near line 3213: table "DayOfSurgeryChecksDropsAndMedicationItemDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 3225: table "DayOfSurgeryChecksPlannedProcedureMedicationItemDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 3268: table "DefaultDrugOptionsDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 3294: table "DefaultDrugs" has more than one primary key
+Parse error near line 3329: table "DefaultQuestionResponse" has more than one primary key
+Parse error near line 3400: table "DestinationScanType" has more than one primary key
+Parse error near line 3864: near "max": syntax error
+  pi_id] uniqueidentifier,     [mds_blob] varbinary(max),     [mds_datecreated] 
+                                      error here ---^
+Parse error near line 3909: table "DonorInsertion" has more than one primary key
+Parse error near line 3928: table "DonorInsertionLog" has more than one primary key
+Parse error near line 3962: table "DonorPreparation" has more than one primary key
+Parse error near line 3983: table "DonorPreparationLog" has more than one primary key
+Parse error near line 4027: table "DrivingVehicle" has more than one primary key
+Parse error near line 4135: table "DrugActualProductPatchHistory" has more than one primary key
+Parse error near line 4158: table "DrugActualProductVersionHistory" has more than one primary key
+Parse error near line 4208: table "DrugBrandPatchHistory" has more than one primary key
+Parse error near line 4219: table "DrugBrandVersionHistory" has more than one primary key
+Parse error near line 4333: table "DrugMigration" has more than one primary key
+Parse error near line 4431: table "DrugMoietyPatchHistory" has more than one primary key
+Parse error near line 4442: table "DrugMoietyVersionHistory" has more than one primary key
+Parse error near line 4487: table "DrugsetDrugLinkDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 4507: table "DrugsetDrugLinkStaticDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 4533: table "DrugStandardOrderDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 4543: table "DrugStrengthUnit" has more than one primary key
+Parse error near line 4631: table "DrugVirtualProductPatchHistory" has more than one primary key
+Parse error near line 4668: table "DrugVirtualProductRoutePatchHistory" has more than one primary key
+Parse error near line 4676: table "DrugVirtualProductRouteVersionHistory" has more than one primary key
+Parse error near line 4685: table "DrugVirtualProductVersionHistory" has more than one primary key
+Parse error near line 4837: table "EkSurgicalCompletion" has more than one primary key
+Parse error near line 4846: table "EkSurgicalCompletionLog" has more than one primary key
+Parse error near line 4894: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_id] uniqueidentifier NOT NULL PRIMARY KEY 
+               ^--- error here
+Parse error near line 4898: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [EncounterId] uniqueidentifier NOT NULL PRIMARY
+               ^--- error here
+Parse error near line 4922: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_mode] int NOT NULL );
+               ^--- error here
+Parse error near line 4926: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_BillingReference] nvarchar(60),     [bse_C
+               ^--- error here
+Parse error near line 4931: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_private] bit );
+               ^--- error here
+Parse error near line 4935: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_VisitClass] nvarchar(60),     [bse_VisitCa
+               ^--- error here
+Parse error near line 4940: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_lks_id_visitreason] int,     [ect_interpre
+               ^--- error here
+Parse error near line 4945: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_Service] nvarchar(100),     [bse_Location]
+               ^--- error here
+Parse error near line 4950: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_lks_id_language] int,     [ect_lks_id_tran
+               ^--- error here
+Parse error near line 4955: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_cpw_CarePathwayId] int NOT NULL,     [bse_
+               ^--- error here
+Parse error near line 4962: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_visittype] int,     [ect_remotelocationid]
+               ^--- error here
+Parse error near line 4967: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_LocationSegment] nvarchar(100),     [bse_O
+               ^--- error here
+Parse error near line 4972: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_remotelocation] varchar(255) );
+               ^--- error here
+Parse error near line 4976: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_ReferralToTreatmentCode] nvarchar(20),    
+               ^--- error here
+Parse error near line 4981: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_lks_id_communicationtype] int,     [ect_pl
+               ^--- error here
+Parse error near line 4986: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_ClinicVisitNumber] nvarchar(40),     [bse_
+               ^--- error here
+Parse error near line 4991: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_operation] uniqueidentifier );
+               ^--- error here
+Parse error near line 4995: table [Encounter] already exists
+  CREATE TABLE [Encounter] (     [bse_ClinicArrivalDate] datetime2,     [bse_Pat
+               ^--- error here
+Parse error near line 5001: table [encounter] already exists
+  CREATE TABLE [encounter] (     [ect_pdh_id] int,     [ect_HasApplicableBilling
+               ^--- error here
+Parse error near line 5143: table "EncounterLink" has more than one primary key
+Parse error near line 5174: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_ObjectId] uniqueidentifier NOT NULL );
+               ^--- error here
+Parse error near line 5178: table [EncounterLog] already exists
+  CREATE TABLE [EncounterLog] (     [EncounterId] int NOT NULL PRIMARY KEY,     
+               ^--- error here
+Parse error near line 5185: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_id] int NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 5189: table [EncounterLog] already exists
+  CREATE TABLE [EncounterLog] (     [ufe_lkt_ReasonTypeId] int NOT NULL,     [uf
+               ^--- error here
+Parse error near line 5194: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_pat_id] uniqueidentifier );
+               ^--- error here
+Parse error near line 5198: table [EncounterLog] already exists
+  CREATE TABLE [EncounterLog] (     [ObjectId] uniqueidentifier NOT NULL,     [e
+               ^--- error here
+Parse error near line 5205: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_loc_id] uniqueidentifier,     [ect_date
+               ^--- error here
+Parse error near line 5210: table [EncounterLog] already exists
+  CREATE TABLE [EncounterLog] (     [AddedBy] uniqueidentifier NOT NULL,     [uf
+               ^--- error here
+Parse error near line 5219: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_daterecorded] datetime,     [ect_datesa
+               ^--- error here
+Parse error near line 5224: table [EncounterLog] already exists
+  CREATE TABLE [EncounterLog] (     [Action] char(1) NOT NULL,     [ufe_Transact
+               ^--- error here
+Parse error near line 5233: table [encounterlog] already exists
+  CREATE TABLE [encounterlog] (     [ect_ety_id] int,     [ect_mode] int NOT NUL
+               ^--- error here
+Parse error near line 5398: near "MAX": syntax error
+  atetime] datetime NOT NULL,     [erb_log] varchar(MAX) NOT NULL );
+                                      error here ---^
+Parse error near line 5427: near "max": syntax error
+     [ecs_ety_id] int,     [ecs_dtoimage] varbinary(max),     [ecs_use_id] uniqu
+                                      error here ---^
+Parse error near line 5438: near "max": syntax error
+  cription] nvarchar(500),     [aet_Icon] varbinary(max) NOT NULL,     [aet_Requ
+                                      error here ---^
+Parse error near line 5471: table "EncounterTemplateActivityVersion" has more than one primary key
+Parse error near line 5476: table "EncounterTemplateDynamicActivitySection" has more than one primary key
+Parse error near line 5481: table "EncounterTemplatePermittedActivity" has more than one primary key
+Parse error near line 5602: table [encountertype] already exists
+  CREATE TABLE [encountertype] (     [ety_id] int NOT NULL PRIMARY KEY,     [ety
+               ^--- error here
+Parse error near line 5607: table [EncounterType] already exists
+  CREATE TABLE [EncounterType] (     [EncounterTypeId] int NOT NULL,     [SiteCo
+               ^--- error here
+Parse error near line 5612: table [encountertype] already exists
+  CREATE TABLE [encountertype] (     [ety_order] int,     [ety_active] bit NOT N
+               ^--- error here
+Parse error near line 5675: table "Endocyclophotocoagulation" has more than one primary key
+Parse error near line 5690: table "EndocyclophotocoagulationLog" has more than one primary key
+Parse error near line 5726: table "EpisodeGUID" has more than one primary key
+Parse error near line 5753: table [ErrorLog] already exists
+  CREATE TABLE [ErrorLog] (     [Id] int NOT NULL PRIMARY KEY,     [Id] int NOT 
+               ^--- error here
+Parse error near line 5761: table [errorlog] already exists
+  CREATE TABLE [errorlog] (     [erl_order] tinyint(1) NOT NULL );
+               ^--- error here
+Parse error near line 5765: table [ErrorLog] already exists
+  CREATE TABLE [ErrorLog] (     [LogDateTime] datetime2 NOT NULL,     [Message] 
+               ^--- error here
+Parse error near line 5772: table [errorlog] already exists
+  CREATE TABLE [errorlog] (     [erl_message] varchar(MAX) NOT NULL,     [erl_ex
+               ^--- error here
+Parse error near line 5777: table [ErrorLog] already exists
+  CREATE TABLE [ErrorLog] (     [ExceptionType] varchar(200) NOT NULL,     [Stac
+               ^--- error here
+Parse error near line 5783: table [errorlog] already exists
+  CREATE TABLE [errorlog] (     [erl_source] varchar(MAX) NOT NULL,     [erl_sta
+               ^--- error here
+Parse error near line 5788: table [ErrorLog] already exists
+  CREATE TABLE [ErrorLog] (     [StackTrace] varchar(MAX) NOT NULL );
+               ^--- error here
+Parse error near line 5792: table [errorlog] already exists
+  CREATE TABLE [errorlog] (     [erl_traceeventtype] tinyint(1) NOT NULL,     [e
+               ^--- error here
+Parse error near line 5817: near "MAX": syntax error
+  ] int NOT NULL PRIMARY KEY,     [Message] varchar(MAX) NOT NULL );
+                                      error here ---^
+Parse error near line 5933: duplicate column name: SubSectionId
+Parse error near line 5943: duplicate column name: SubSectionId
+Parse error near line 5995: table "FeatureLookupSet" has more than one primary key
+Parse error near line 6000: table "FeatureResponse" has more than one primary key
+Parse error near line 6075: table "FlagAdditionalDisplayOption" has more than one primary key
+Parse error near line 6233: duplicate column name: SubSectionId
+Parse error near line 6252: duplicate column name: SubSectionId
+Parse error near line 6280: table "GlaucomaDefaultsCyclodiodeMedicationsDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 6288: table "GlaucomaDefaultsDefaultDrugsDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 6296: table "GlaucomaDefaultsLTMedicationsDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 6327: table "gradestousertypes" has more than one primary key
+Parse error near line 6332: table "Grading" has more than one primary key
+Parse error near line 6343: table "GradingClinicalConcept" has more than one primary key
+Parse error near line 6386: table "GradingSchemeFeatures" has more than one primary key
+Parse error near line 6391: table "GradingSchemeResult" has more than one primary key
+Parse error near line 6427: table "groupstopermissions" has more than one primary key
+Parse error near line 6432: table "groupstousers" has more than one primary key
+Parse error near line 6442: duplicate column name: SubSectionId
+Parse error near line 6453: duplicate column name: SubSectionId
+Parse error near line 6657: table "HistoryItem" has more than one primary key
+Parse error near line 6763: near "MAX": syntax error
+  NULL,     [hls_int] int,     [hls_string] varchar(MAX) );
+                                      error here ---^
+Parse error near line 6798: near "MAX": syntax error
+  ] int NOT NULL PRIMARY KEY,     [hlm_hl7] varchar(MAX),     [hlm_xml] varchar(
+                                      error here ---^
+Parse error near line 6810: near "MAX": syntax error
+  q_status] int NOT NULL,     [hmq_message] varchar(MAX) NOT NULL,     [hmq_ack]
+                                      error here ---^
+Parse error near line 6851: duplicate column name: Id
+Parse error near line 6863: duplicate column name: Id
+Parse error near line 6919: table "HostPreparation" has more than one primary key
+Parse error near line 6936: table "HostPreparationLog" has more than one primary key
+Parse error near line 7064: near "max": syntax error
+  Name] varchar(255) NOT NULL,     [Data] varbinary(max) NOT NULL );
+                                      error here ---^
+Parse error near line 7230: table "InsertionDonorPositioning" has more than one primary key
+Parse error near line 7237: table "InsertionDonorPositioningLog" has more than one primary key
+Parse error near line 7267: near "max": syntax error
+  td_mim_id] int NOT NULL,     [itd_data] varbinary(max) );
+                                      error here ---^
+Parse error near line 7421: table "Investigation" has more than one primary key
+Parse error near line 7458: table "InvestigationItem" has more than one primary key
+Parse error near line 7465: table "InvestigationItemLog" has more than one primary key
+Parse error near line 7499: table "InvestigationLog" has more than one primary key
+Parse error near line 7559: table "IolGUID" has more than one primary key
+Parse error near line 7831: duplicate column name: SubSectionId
+Parse error near line 7840: duplicate column name: SubSectionId
+Parse error near line 7888: table "ItemTypeResponse" has more than one primary key
+Parse error near line 8100: table "LaserTrabeculoplasty" has more than one primary key
+Parse error near line 8126: table "LaserTrabeculoplastyLog" has more than one primary key
+Parse error near line 8522: near "MAX": syntax error
+  ] nchar(20) NOT NULL,     [lal_alerttext] varchar(MAX) NOT NULL,     [lal_orde
+                                      error here ---^
+Parse error near line 8690: table "LocationGUID" has more than one primary key
+Parse error near line 8712: table "locationstolocationtype" has more than one primary key
+Parse error near line 8947: table "LookupDataResponse" has more than one primary key
+Parse error near line 8953: table "LookupDataResponseLog" has more than one primary key
+Parse error near line 8965: table "LookUps" has more than one primary key
+Parse error near line 8987: table "LTMedications" has more than one primary key
+Parse error near line 9032: table "MandatoryGradingFeatureExclusion" has more than one primary key
+Parse error near line 9126: table "MedicationElementsDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 9146: table "MedisoftIdMigration" has more than one primary key
+Parse error near line 9154: near "MAX": syntax error
+  255),     [mml_rowsto] int,     [mml_log] varchar(MAX),     [mml_timestamp] da
+                                      error here ---^
+Parse error near line 9168: table "MedisoftMigrationType" has more than one primary key
+Parse error near line 9178: near "MAX": syntax error
+  medisoftscriptstore] (     [scriptclause] varchar(MAX) NOT NULL );
+                                      error here ---^
+Parse error near line 9186: table "MedisoftStaticID" has more than one primary key
+Parse error near line 9191: near "MAX": syntax error
+  _ticketId] int NOT NULL,     [sea_reason] varchar(MAX) NOT NULL );
+                                      error here ---^
+Parse error near line 9207: near "MAX": syntax error
+  ntifier NOT NULL,     [tok_supportreason] varchar(MAX) NOT NULL,     [tok_date
+                                      error here ---^
+Parse error near line 9234: table "Message" has more than one primary key
+Parse error near line 9338: table "MessageLog" has more than one primary key
+Parse error near line 9387: near "max": syntax error
+  (8) NOT NULL PRIMARY KEY,     [Payload] varbinary(max) NOT NULL,     [Inserted
+                                      error here ---^
+Parse error near line 9402: table "MessageState" has more than one primary key
+Parse error near line 9448: table "MicropulseDiodeLaserTrabeculoplasty" has more than one primary key
+Parse error near line 9465: table "MicropulseDiodeLaserTrabeculoplastyLog" has more than one primary key
+Parse error near line 9579: table "MobilityAids" has more than one primary key
+Parse error near line 9584: table "MobilityAssistanceRequired" has more than one primary key
+Parse error near line 9604: table "MophthDrugClassMapDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 9613: duplicate column name: Id
+Parse error near line 9637: table "MuscleIsolated" has more than one primary key
+Parse error near line 9654: duplicate column name: Id
+Parse error near line 9665: table "MusclesIsolated" has more than one primary key
+Parse error near line 10020: table [Operation] already exists
+  CREATE TABLE [Operation] (     [opo_ActivityId] uniqueidentifier NOT NULL PRIM
+               ^--- error here
+Parse error near line 10025: table [operation] already exists
+  CREATE TABLE [operation] (     [ope_act_id] uniqueidentifier,     [ope_admissi
+               ^--- error here
+Parse error near line 10030: table [Operation] already exists
+  CREATE TABLE [Operation] (     [opo_SelectedOther] nvarchar(1000),     [opo_Lo
+               ^--- error here
+Parse error near line 10035: table [operation] already exists
+  CREATE TABLE [operation] (     [ope_datelisted] datetime,     [ope_flag] bit )
+               ^--- error here
+Parse error near line 10040: table [Operation] already exists
+  CREATE TABLE [Operation] (     [opo_GeneralAnaesthetic] bit,     [opo_HasSedat
+               ^--- error here
+Parse error near line 10045: table [operation] already exists
+  CREATE TABLE [operation] (     [ope_ptr_id_gp] uniqueidentifier,     [ope_lks_
+               ^--- error here
+Parse error near line 10050: table [Operation] already exists
+  CREATE TABLE [Operation] (     [opo_SelectedOperationDescription] nvarchar(400
+               ^--- error here
+Parse error near line 10061: table [OperationAnaesthesia] already exists
+  CREATE TABLE [OperationAnaesthesia] (     [opa_id] int NOT NULL PRIMARY KEY,  
+               ^--- error here
+Parse error near line 10073: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_ObjectId] int NOT NULL,     
+               ^--- error here
+Parse error near line 10078: table [OperationAnaesthesiaLog] already exists
+  CREATE TABLE [OperationAnaesthesiaLog] (     [opa_ObjectId] int NOT NULL,     
+               ^--- error here
+Parse error near line 10083: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_act_id] uniqueidentifier NOT
+               ^--- error here
+Parse error near line 10088: table [OperationAnaesthesiaLog] already exists
+  CREATE TABLE [OperationAnaesthesiaLog] (     [opa_AddedBy] uniqueidentifier NO
+               ^--- error here
+Parse error near line 10093: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_lks_id_blockmobility] int,  
+               ^--- error here
+Parse error near line 10098: table [OperationAnaesthesiaLog] already exists
+  CREATE TABLE [OperationAnaesthesiaLog] (     [opa_Action] char(1) NOT NULL,   
+               ^--- error here
+Parse error near line 10103: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_hyalase] bit,     [oan_gener
+               ^--- error here
+Parse error near line 10108: table [OperationAnaesthesiaLog] already exists
+  CREATE TABLE [OperationAnaesthesiaLog] (     [opa_opo_id] uniqueidentifier NOT
+               ^--- error here
+Parse error near line 10113: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_DateAdded] datetime NOT NULL
+               ^--- error here
+Parse error near line 10118: table [OperationAnaesthesiaLog] already exists
+  CREATE TABLE [OperationAnaesthesiaLog] (     [opa_RouteDescription] nvarchar(5
+               ^--- error here
+Parse error near line 10123: table [operationanaesthesialog] already exists
+  CREATE TABLE [operationanaesthesialog] (     [oan_TransactionId] uniqueidentif
+               ^--- error here
+Parse error near line 10216: table "OpticDiscAdditionalData" has more than one primary key
+Parse error near line 10334: near "max": syntax error
+  ime2 NOT NULL,     [hom_MessageContent] varbinary(max),     [hom_ErrorReason] 
+                                      error here ---^
+Parse error near line 10354: near "max": syntax error
+  ime2 NOT NULL,     [hom_MessageContent] varbinary(max),     [hom_ErrorReason] 
+                                      error here ---^
+Parse error near line 10383: table "Outcome" has more than one primary key
+Parse error near line 10442: table "PachymetryReview" has more than one primary key
+Parse error near line 10472: table "PackagedEncounterTemplateVersion" has more than one primary key
+Parse error near line 10490: table "Paracentesis" has more than one primary key
+Parse error near line 10503: table "ParacentesisLog" has more than one primary key
+Parse error near line 10572: table "PartnerProgramme" has more than one primary key
+Parse error near line 10605: near "MAX": syntax error
+   int NOT NULL PRIMARY KEY,     [Messages] varchar(MAX) NOT NULL,     [InsertDa
+                                      error here ---^
+Parse error near line 10638: table "Pathway" has more than one primary key
+Parse error near line 10655: table "PathwayAssessmentType" has more than one primary key
+Parse error near line 10684: table "PathwayVersion" has more than one primary key
+Parse error near line 10695: table "PathwayVersionDischargeReason" has more than one primary key
+Parse error near line 10700: table "PathwayVersionLog" has more than one primary key
+Parse error near line 10739: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_id] uniqueidentifier NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 10743: table [Patient] already exists
+  CREATE TABLE [Patient] (     [Id] int NOT NULL PRIMARY KEY,     [PatientNumber
+               ^--- error here
+Parse error near line 10750: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_initials] nvarchar(510) );
+               ^--- error here
+Parse error near line 10754: table [Patient] already exists
+  CREATE TABLE [Patient] (     [Forename] nvarchar(510) NOT NULL,     [Surname] 
+               ^--- error here
+Parse error near line 10759: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_forename] nvarchar(510) );
+               ^--- error here
+Parse error near line 10763: table [Patient] already exists
+  CREATE TABLE [Patient] (     [pcl_patientNumber] varchar(50),     [pcl_dateOfC
+               ^--- error here
+Parse error near line 10768: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_title] nvarchar(510) );
+               ^--- error here
+Parse error near line 10772: table [Patient] already exists
+  CREATE TABLE [Patient] (     [DateOfBirth] date(3) NOT NULL );
+               ^--- error here
+Parse error near line 10776: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_suffix] nvarchar(510) );
+               ^--- error here
+Parse error near line 10780: table [Patient] already exists
+  CREATE TABLE [Patient] (     [pcl_csw_id] int NOT NULL,     [pcl_bod_id] int )
+               ^--- error here
+Parse error near line 10785: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_previoussurname] nvarchar(510),     [pat_req
+               ^--- error here
+Parse error near line 10790: table [Patient] already exists
+  CREATE TABLE [Patient] (     [pcl_comments] varchar(2000),     [pcl_endDate] d
+               ^--- error here
+Parse error near line 10796: table [patient] already exists
+  CREATE TABLE [patient] (     [pat_dod] date(3),     [pat_lks_id_gender] int,  
+               ^--- error here
+Parse error near line 11552: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_ObjectId] uniqueidentifier NOT NULL,     
+               ^--- error here
+Parse error near line 11557: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_ObjectId] int NOT NULL,     [pcl_DateAdde
+               ^--- error here
+Parse error near line 11562: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_surname] nvarchar(510),     [pat_initials
+               ^--- error here
+Parse error near line 11567: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_AddedBy] uniqueidentifier NOT NULL,     [
+               ^--- error here
+Parse error near line 11572: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_forename] nvarchar(510),     [pat_title] 
+               ^--- error here
+Parse error near line 11577: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_Action] char(1) NOT NULL,     [pcl_pat_id
+               ^--- error here
+Parse error near line 11582: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_suffix] nvarchar(510),     [pat_previouss
+               ^--- error here
+Parse error near line 11587: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_pnt_id] int NOT NULL,     [pcl_patientNum
+               ^--- error here
+Parse error near line 11592: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_requestedname] nvarchar(510),     [pat_do
+               ^--- error here
+Parse error near line 11597: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_dateOfConsent] datetime,     [pcl_csw_id]
+               ^--- error here
+Parse error near line 11602: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_dod] date(3),     [pat_lks_id_gender] int
+               ^--- error here
+Parse error near line 11607: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_bod_id] int,     [pcl_comments] varchar(2
+               ^--- error here
+Parse error near line 11612: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_lks_id_ethnic] int,     [pat_lks_id_relig
+               ^--- error here
+Parse error near line 11617: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_endDate] datetime,     [pcl_lks_id] int )
+               ^--- error here
+Parse error near line 11622: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_lks_id_language] int,     [pat_lks_id_mar
+               ^--- error here
+Parse error near line 11627: table [PatientLog] already exists
+  CREATE TABLE [PatientLog] (     [pcl_WorkflowStatusLastUpdated] datetime );
+               ^--- error here
+Parse error near line 11631: table [patientlog] already exists
+  CREATE TABLE [patientlog] (     [pat_deceased] tinyint(1),     [pat_occupation
+               ^--- error here
+Parse error near line 11653: table [patientmatch] already exists
+  CREATE TABLE [patientmatch] (     [ipm_id] int NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 11657: table [PatientMatch] already exists
+  CREATE TABLE [PatientMatch] (     [PatientMatchId] int NOT NULL,     [PatientI
+               ^--- error here
+Parse error near line 11662: table [patientmatch] already exists
+  CREATE TABLE [patientmatch] (     [ipm_forename] nvarchar(510) );
+               ^--- error here
+Parse error near line 11666: table [PatientMatch] already exists
+  CREATE TABLE [PatientMatch] (     [EmrPatientId] uniqueidentifier,     [Number
+               ^--- error here
+Parse error near line 11671: table [patientmatch] already exists
+  CREATE TABLE [patientmatch] (     [ipm_yearofbirth] int,     [ipm_monthofbirth
+               ^--- error here
+Parse error near line 11676: table [PatientMatch] already exists
+  CREATE TABLE [PatientMatch] (     [LatestAttempt] datetime NOT NULL );
+               ^--- error here
+Parse error near line 11680: table [patientmatch] already exists
+  CREATE TABLE [patientmatch] (     [ipm_dayofbirth] int,     [ipm_lks_id_gender
+               ^--- error here
+Parse error near line 11752: table "PatientMedicationRecordDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 11798: table [PatientMerge] already exists
+  CREATE TABLE [PatientMerge] (     [opm_Id] int NOT NULL PRIMARY KEY,     [opm_
+               ^--- error here
+Parse error near line 11803: table [patientmerge] already exists
+  CREATE TABLE [patientmerge] (     [pmg_EndTime] datetime,     [pmg_pat_id_prim
+               ^--- error here
+Parse error near line 11808: table [PatientMerge] already exists
+  CREATE TABLE [PatientMerge] (     [opm_pat_SecondaryPatientId] uniqueidentifie
+               ^--- error here
+Parse error near line 11812: table [patientmerge] already exists
+  CREATE TABLE [patientmerge] (     [pmg_pat_id_secondary] uniqueidentifier NOT 
+               ^--- error here
+Parse error near line 11818: table [PatientMerge] already exists
+  CREATE TABLE [PatientMerge] (     [opm_MergedOphthalSuitePatientId] int,     [
+               ^--- error here
+Parse error near line 11823: table [patientmerge] already exists
+  CREATE TABLE [patientmerge] (     [pmg_exception] varchar(MAX),     [pmg_Start
+               ^--- error here
+Parse error near line 12185: table "PeripheralIridectomy" has more than one primary key
+Parse error near line 12193: table "PeripheralIridectomyLog" has more than one primary key
+Parse error near line 12232: table [Permission] already exists
+  CREATE TABLE [Permission] (     [etp_Id] int NOT NULL PRIMARY KEY,     [etp_De
+               ^--- error here
+Parse error near line 12239: table [permission] already exists
+  CREATE TABLE [permission] (     [per_description] nvarchar(510),     [per_acti
+               ^--- error here
+Parse error near line 12265: table "Plan" has more than one primary key
+Parse error near line 12272: table "PlanLog" has more than one primary key
+Parse error near line 12340: table "PlannedOperation" has more than one primary key
+Parse error near line 12351: table [PlannedOperation] already exists
+  CREATE TABLE [PlannedOperation] (     [plo_lks_id_AnaesthesiaType] int,     [a
+               ^--- error here
+Parse error near line 12357: table [plannedoperation] already exists
+  CREATE TABLE [plannedoperation] (     [pop_lks_id_intervaltype] int,     [pop_
+               ^--- error here
+Parse error near line 12362: table [PlannedOperation] already exists
+  CREATE TABLE [PlannedOperation] (     [apo_HasSedation] bit NOT NULL );
+               ^--- error here
+Parse error near line 12366: table [plannedoperation] already exists
+  CREATE TABLE [plannedoperation] (     [pop_lks_id_visittype] int,     [pop_lks
+               ^--- error here
+Parse error near line 12444: table "PlannedOperationLocalAnaestheticRoute" has more than one primary key
+Parse error near line 12484: table [PlannedOperationProcedure] already exists
+  CREATE TABLE [PlannedOperationProcedure] (     [Id] int NOT NULL PRIMARY KEY, 
+               ^--- error here
+Parse error near line 12660: table "PlannedVisitInstructions" has more than one primary key
+Parse error near line 12679: table "PlatePosition" has more than one primary key
+Parse error near line 12696: duplicate column name: SubSectionId
+Parse error near line 12704: duplicate column name: SubSectionId
+Parse error near line 12737: table "PositioningOptionItem" has more than one primary key
+Parse error near line 12896: duplicate column name: Id
+Parse error near line 12909: duplicate column name: Id
+Parse error near line 13001: table "PracticeLink" has more than one primary key
+Parse error near line 13039: table "practicestopractitioners" has more than one primary key
+Parse error near line 13249: duplicate column name: Id
+Parse error near line 13269: duplicate column name: Id
+Parse error near line 13377: table "procedureactivityrules" has more than one primary key
+Parse error near line 13389: table "procedureactivitytypegroupitem" has more than one primary key
+Parse error near line 13425: table "ProcedureCodeClinicalStudyLink" has more than one primary key
+Parse error near line 13430: table "ProcedureFactorsIncreasingSurgicalDifficulty" has more than one primary key
+Parse error near line 13622: table "ProceduresGUID" has more than one primary key
+Parse error near line 13739: table "QuestionCheckList" has more than one primary key
+Parse error near line 13780: table "QuestionResponse" has more than one primary key
+Parse error near line 13793: table "QuestionResponseLog" has more than one primary key
+Parse error near line 13821: table "QuestionResponseVersion" has more than one primary key
+Parse error near line 13832: table "QuestionResponseVersionLog" has more than one primary key
+Parse error near line 13854: table "QuestionsResponse" has more than one primary key
+Parse error near line 13859: table "QuestionsResponseVersion" has more than one primary key
+Parse error near line 13893: duplicate column name: Id
+Parse error near line 13907: near "MAX": syntax error
+  ssorId] int NOT NULL,     [FailureReason] varchar(MAX),     [ErrorGroupId] int
+                                      error here ---^
+Parse error near line 13957: duplicate column name: Id
+Parse error near line 14128: table "ReferralGUID" has more than one primary key
+Parse error near line 14175: table [referralsource] already exists
+  CREATE TABLE [referralsource] (     [rfs_rft_id] int NOT NULL,     [rfs_ptr_id
+               ^--- error here
+Parse error near line 14390: near "MAX": syntax error
+     [FailureReason] TEXT,     [StackTrace] varchar(MAX) );
+                                      error here ---^
+Parse error near line 14506: table "Riboflavin" has more than one primary key
+Parse error near line 14527: table "RiboflavinLog" has more than one primary key
+Parse error near line 14574: table "RiboflavinPreparations" has more than one primary key
+Parse error near line 14581: table "RiboflavinPreparationsLog" has more than one primary key
+Parse error near line 14779: table "ScreeningEye" has more than one primary key
+Parse error near line 14818: table "Section" has more than one primary key
+Parse error near line 14833: table "SectionComment" has more than one primary key
+Parse error near line 14850: table "SectionItemVersion" has more than one primary key
+Parse error near line 14855: table "SectionLog" has more than one primary key
+Parse error near line 14905: table "SelectedLocationForDevice" has more than one primary key
+Parse error near line 14920: table "SelectiveLaserTrabeculoplasty" has more than one primary key
+Parse error near line 14932: table "SelectiveLaserTrabeculoplastyLog" has more than one primary key
+Parse error near line 15120: table "ShortcutGroupClinicalConcept" has more than one primary key
+Parse error near line 15148: table "ShortcutUserFavourite" has more than one primary key
+Parse error near line 15165: table "SiteConfiguration" has more than one primary key
+Parse error near line 15188: table "SiteConfigurationLog" has more than one primary key
+Parse error near line 15337: table "SocialServices" has more than one primary key
+Parse error near line 15551: table "StudyAvailableGenders" has more than one primary key
+Parse error near line 15582: table "SubscribedPublisherIdentifier" has more than one primary key
+Parse error near line 15587: duplicate column name: Id
+Parse error near line 15600: duplicate column name: Id
+Parse error near line 15674: table "SurgeonDefaultAnaesthesiaDrugDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 15762: table "SurgeonDefaultCataractDrugDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 15848: table "SurgeonDefaultDrugDuplicateMedicationRemovalBackup" has more than one primary key
+Parse error near line 16171: duplicate column name: Id
+Parse error near line 16179: duplicate column name: Id
+Parse error near line 16191: duplicate column name: Id
+Parse error near line 16213: duplicate column name: Id
+Parse error near line 16231: table "SurgicalCompletionSuture" has more than one primary key
+Parse error near line 16242: table "SurgicalCompletionSutureLog" has more than one primary key
+Parse error near line 16329: near "max": syntax error
+  EY,     [version] int,     [definition] varbinary(max) );
+                                      error here ---^
+Parse error near line 16341: table "SystemActivityEncounterType" has more than one primary key
+Parse error near line 16459: near "max": syntax error
+  td_mim_id] int NOT NULL,     [itd_data] varbinary(max),     [ect_id] uniqueide
+                                      error here ---^
+Parse error near line 16511: table "Template" has more than one primary key
+Parse error near line 16533: near "max": syntax error
+  char(1024) NOT NULL,     [tbk_contents] varbinary(max) NOT NULL,     [tbk_tfm_
+                                      error here ---^
+Parse error near line 16593: table "TemplateLanguage" has more than one primary key
+Parse error near line 16621: table "TemplateVersionData" has more than one primary key
+Parse error near line 16627: duplicate column name: SubSectionId
+Parse error near line 16634: duplicate column name: SubSectionId
+Parse error near line 16675: duplicate column name: Id
+Parse error near line 16695: near "max": syntax error
+  OT NULL PRIMARY KEY,     [ChartContent] varbinary(max) );
+                                      error here ---^
+Parse error near line 16700: near "max": syntax error
+  OT NULL PRIMARY KEY,     [ChartContent] varbinary(max),     [DateAdded] dateti
+                                      error here ---^
+Parse error near line 16843: duplicate column name: Id
+Parse error near line 16879: near "max": syntax error
+   NOT NULL PRIMARY KEY,     [ebt_Binary] varbinary(max),     [ebt_FailedGenerat
+                                      error here ---^
+Parse error near line 17443: table "Trabeculectomy" has more than one primary key
+Parse error near line 17478: table "TrabeculectomyLog" has more than one primary key
+Parse error near line 17524: table "TrabeculectomyOther" has more than one primary key
+Parse error near line 17531: table "TrabeculectomyOtherLog" has more than one primary key
+Parse error near line 17548: table "TractionSuture" has more than one primary key
+Parse error near line 17558: table "TractionSutureLog" has more than one primary key
+Parse error near line 17598: duplicate column name: SubSectionId
+Parse error near line 17613: duplicate column name: SubSectionId
+Parse error near line 17638: table "TransScleralCyclodiode" has more than one primary key
+Parse error near line 17654: table "TransScleralCyclodiodeLog" has more than one primary key
+Parse error near line 17680: table "TransScleralMicropulseCyclodiode" has more than one primary key
+Parse error near line 17700: table "TransScleralMicropulseCyclodiodeLog" has more than one primary key
+Parse error near line 17887: table "TubeOcclusion" has more than one primary key
+Parse error near line 17900: table "TubeOcclusionLog" has more than one primary key
+Parse error near line 17923: table "TubeProcedureSutures" has more than one primary key
+Parse error near line 17948: table "TubeSurgicalCompletionSuture" has more than one primary key
+Parse error near line 17961: table "TubeSurgicalCompletionSutureLog" has more than one primary key
+Parse error near line 17989: table "Type" has more than one primary key
+Parse error near line 18094: table "UserGroup" has more than one primary key
+Parse error near line 18122: table "UserGroupUser" has more than one primary key
+Parse error near line 18186: table "UserMappings" has more than one primary key
+Parse error near line 18273: table "UVDetails" has more than one primary key
+Parse error near line 18293: table "UVDetailsLog" has more than one primary key
+Parse error near line 18358: duplicate column name: Id
+Parse error near line 18421: table "versionstofiles" has more than one primary key
+Parse error near line 18442: duplicate column name: Id
+Parse error near line 18454: duplicate column name: Id
+Parse error near line 18510: table "Viscoelastic" has more than one primary key
+Parse error near line 18517: table "ViscoelasticLog" has more than one primary key
+Parse error near line 18636: table [visualacuity] already exists
+  CREATE TABLE [visualacuity] (     [evl_id] int NOT NULL PRIMARY KEY );
+               ^--- error here
+Parse error near line 18640: table [VisualAcuity] already exists
+  CREATE TABLE [VisualAcuity] (     [ReferralRequestId] int NOT NULL,     [Date]
+               ^--- error here
+Parse error near line 18645: table [visualacuity] already exists
+  CREATE TABLE [visualacuity] (     [evl_RecordedOn] date(3) );
+               ^--- error here
+Parse error near line 18677: table "VisualAcuityMapping" has more than one primary key

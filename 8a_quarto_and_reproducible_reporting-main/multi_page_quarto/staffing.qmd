@@ -1,0 +1,49 @@
+---
+title: "Staffing KPIs"
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+execute:
+  echo: false
+---
+```{python}
+#| echo: false
+import os
+team = os.environ.get('QUARTO_PARAM_TEAM', "Waterdeep")
+```
+
+
+```{python}
+#| output: false
+from common import *
+```
+
+
+:::: {.panel-tabset}
+
+## KPI 001 - Vacancy Rate
+
+`{python} get_kpi_month('KPI 001 - Vacancy Rate')`
+
+```{python}
+kpi_line_chart('KPI 001 - Vacancy Rate')
+```
+
+## KPI 002 - Turnover Rate
+
+`{python} get_kpi_month('KPI 002 - Turnover Rate')`
+
+```{python}
+kpi_line_chart('KPI 002 - Turnover Rate')
+```
+
+## KPI 003 - Days Lost to Staff Sickness
+
+`{python} get_kpi_month('KPI 003 - Days Lost to Staff Sickness')`
+
+```{python}
+kpi_line_chart('KPI 003 - Days Lost to Staff Sickness')
+```
+::::
+

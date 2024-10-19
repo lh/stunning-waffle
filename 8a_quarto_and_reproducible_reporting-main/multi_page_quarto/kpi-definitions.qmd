@@ -1,0 +1,31 @@
+---
+title: "KPI Definitions"
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+execute:
+  echo: false
+---
+```{python}
+#| echo: false
+import os
+team = os.environ.get('QUARTO_PARAM_TEAM', "Waterdeep")
+```
+
+
+
+```{python}
+#| output: false
+from common import *
+```
+
+
+
+```{python}
+show(
+  kpi_most_recent.drop(columns=["value"])
+  .rename(columns={'variable': 'KPI', 'Formatted Value':'Value', 'Format': 'KPI Format', 'Details': 'Definition'}
+  ), classes="display wrap"
+  )
+```

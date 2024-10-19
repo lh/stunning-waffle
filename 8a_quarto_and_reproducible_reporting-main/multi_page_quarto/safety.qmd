@@ -1,0 +1,30 @@
+---
+title: "Safety KPIs"
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+execute:
+  echo: false
+---
+
+```{python}
+#| echo: false
+import os
+team = os.environ.get('QUARTO_PARAM_TEAM', "Waterdeep")
+```
+
+
+```{python}
+#| output: false
+from common import *
+```
+
+
+## KPI 301 - Incidents in Month
+
+`{python} get_kpi_month('KPI 301 - Incidents in Month')`
+
+```{python}
+kpi_line_chart('KPI 301 - Incidents in Month')
+```

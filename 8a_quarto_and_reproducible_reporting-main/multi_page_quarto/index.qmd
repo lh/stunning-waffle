@@ -1,0 +1,51 @@
+---
+title: "CMHT KPIs Dashboard"
+params:
+  team: "Waterdeep"
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+execute:
+  echo: false
+---
+
+
+```{python}
+#| echo: false
+import os
+team = os.environ.get('QUARTO_PARAM_TEAM', "Waterdeep")
+```
+
+
+
+```{python}
+#| output: false
+
+
+from common import *
+```
+```{python}
+#| tags: [parameters]
+#| echo: false
+
+
+```
+
+
+# Overview {.unnumbered}
+
+This dashboard presents key performance indicators (KPIs) for the `{python} team` Community Mental Health Team (CMHT). The data is organized into three main categories:
+
+1. [Staffing KPIs](staffing.qmd)
+2. [Referral and Access KPIs](referral-access.qmd)
+3. [Safety KPIs](safety.qmd)
+
+Click on the links above or use the navigation menu to explore each category of KPIs.
+
+For detailed definitions of all KPIs, please refer to the [KPI Definitions](kpi-definitions.qmd) page.
+
+```{python}
+#| output: asis
+print(f"Data last updated: {most_recent_month_string}")
+```

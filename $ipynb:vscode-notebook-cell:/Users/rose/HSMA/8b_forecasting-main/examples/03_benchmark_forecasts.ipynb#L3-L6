@@ -1,0 +1,4 @@
+ax = ed_daily.plot(figsize=(12,4))
+nf1.fittedvalues.plot(ax=ax, linestyle='-.') # same data, just shifted across by 1 day
+preds_as_series(ed_daily, nf1_preds).plot(kind='line', ax=ax)  # Plot the series as a line plot
+_ = ax.legend(['train', 'Naive1'])
